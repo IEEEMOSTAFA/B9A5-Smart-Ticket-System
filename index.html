@@ -13,8 +13,113 @@
 </head>
 
 <body>
-    <main>
+    <main class="m-3">
+        <!-- Navbar Section -->
+        <section>
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>About</a></li>
+                            <li>
+                                <a>Destination</a>
+                                <ul class="p-2">
+                                    <li><a>Submenu 1</a></li>
+                                    <li><a>Submenu 2</a></li>
+                                </ul>
+                            </li>
+                            <li><a>Search</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost text-xl font-raleway">P-Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a>Home</a></li>
+                        <li>
+                            <details>
+                                <summary>About</summary>
+                                <ul class="p-2">
+                                    <li><a>Submenu 1</a></li>
+                                    <li><a>Submenu 2</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn bg-[#1DD10019] font-raleway px-10 py-2 font-extrabold">Bus <img class=" h-auto sm:w-3 md:w-4 lg:w-6 xl:w-9" src="images/bus-icon.png" alt=""></a>
+                    
+                </div>
+            </div>
+
+
+        </section>
+        <!-- Banner section  -->
+        <section  class="min-h-screen  bg-[url(images/banner.png)] bg-no-repeat bg-center">
+            <div  class="home min-h-screen text-white flex flex-col justify-center items-center ">
+                <div class="flex flex-col items-center gap-20">
+                    <h1 class="text-3xl  uppercase font-raleway font-extrabold text-center">End-to-End Travel with <br><span class="text-[#1DD100]">P Paribahan</span> </h1>
+                    <p class="text-center">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
+                    <button onclick="play()" class="btn bg-[#1DD100] text-black">Buy Tickets</button>
+                </div>
+
+            </div> 
+
+        </section>
+         <!-- Divider section -->
+        <section class="min-h-screen mx-14">
+            <div class="text-center font-bold mb-7 text-4xl"><h3>Best offers for you</h3></div>
+            <div class="flex flex-col w-auto h-min lg:flex-row">
+                <div class="grid flex-grow h-40 card bg-base-300 rounded-box ">
+                    <div class="flex justify-evenly items-end">
+                        <div class="p-12">
+                            <h1 class=" font-extrabold text-3xl">15% OFF</h1>
+                            <p class=" font-semibold">on your next purchase</p>
+                            <p class=" text-gray-500 ">Use By June 2024</p>
+                        </div>
+                        <!-- <div class="divider lg:divider-horizontal grid grid-flow-col"></div>  -->
+                        <div class="border-l border-red-500 "></div>
+                        <div class="p-12 "> <h3 class=" font-bold text-xl">NEW15 <br> <span class="text-gray-500 text-sm">coupon code</span></h3>
+                        </div>
+                    </div>
+
+                </div> 
+                <div class="divider lg:divider-horizontal text-red-300">OR</div> 
+                <div class="grid flex-grow h-40 card bg-base-300 rounded-box ">
+                    <div class="flex justify-evenly items-end">
+                        <div class="p-12">
+                            <h1 class=" font-extrabold text-3xl">20% OFF</h1>
+                            <p class=" font-semibold">on your next purchase</p>
+                            <p class=" text-gray-500 ">Use By Apri 2024</p>
+                        </div>
+                        <!-- <div class="divider lg:divider-horizontal grid grid-flow-col"></div>  -->
+                        <div class="border-l border-red-500  "></div>
+                        <div class="p-12 "> <h3 class=" font-bold text-xl">Couple 20 <br> <span class="text-gray-500 text-sm">coupon code</span></h3>
+                        </div>
+                    </div>
+
+                </div> 
+              </div>
+              <div class="text-center mt-14 mb-14">
+                <button class="btn btn-outline  text-green-600">See All Offers</button>
+              </div>
+              
+
+        </section>
         
+        <!-- calender section -->
+      
     </main>
 
 </body>

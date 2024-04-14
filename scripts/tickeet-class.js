@@ -1,0 +1,33 @@
+
+const allBtn = document.getElementsByClassName("add-btn");
+for (const btn of allBtn) {
+btn.addEventListener('click', function(event){
+    // const name = event.target.parentNode.childNodes.innerText;
+    const name = event.target.innerText;
+    const class_state = "economy";
+    const price = parseInt(500);
+    console.log(name,class_state,price);
+    // testing part up::
+    const selectedContainer = document.getElementById("selected-players-container");
+    const div = document.createElement("div");
+        div.classList.add("flex", "gap-5","justify-evenly");
+        // div.classList.add("px-2");
+        div.classList.add("px-2", "container-with-gap");
+        const p1 = document.createElement("p");
+        const p2 = document.createElement("p");
+        const p3 = document.createElement("p");
+
+        p1.innerText = name;
+        p2.innerText = class_state;
+        p3.innerText = price;
+
+        div.appendChild(p1);
+        div.appendChild(p2);
+        div.appendChild(p3);
+
+        selectedContainer.appendChild(div);
+        updateTotalCost(price);
+    
+});
+
+}

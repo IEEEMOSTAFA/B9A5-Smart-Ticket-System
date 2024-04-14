@@ -1,0 +1,69 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Move Section</title>
+</head>
+<body>
+
+<section id="section1">
+    <h2>Section 1</h2>
+    <p>This is section 1</p>
+</section>
+
+<section id="section2">
+    <h2>Section 2</h2>
+    <p>This is section 2</p>
+</section>
+
+<button onclick="moveSection()">Move Section</button>
+
+<script>
+function moveSection() {
+    // Get the section element to move
+    var sectionToMove = document.getElementById('section1');
+    
+    // Get the destination section where you want to move the section
+    var destinationSection = document.getElementById('section2');
+    
+    // Append the section to the destination section
+    destinationSection.appendChild(sectionToMove);
+    // Or you can use insertBefore() to place it before another element:
+    // destinationSection.insertBefore(sectionToMove, destinationSection.firstChild);
+}
+</script>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scroll to Section</title>
+</head>
+<body>
+
+<section id="section1">
+    <h2>Section 1</h2>
+    <button onclick="scrollToNextSection()">Scroll to Next Section</button>
+</section>
+
+<section id="section2">
+    <h2>Section 2</h2>
+    <p>This is the new section</p>
+</section>
+
+<script>
+function scrollToNextSection() {
+    // Get the next section element
+    var nextSection = document.getElementById('section2');
+    
+    // Scroll to the next section
+    nextSection.scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>

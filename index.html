@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <main class="m-3 ">
+    <main id="home-screen" class="m-3 ">
         <!-- Navbar Section -->
         <section>
             <div class="navbar bg-base-100">
@@ -157,7 +157,7 @@
                             <div>
                                 <button class="btn bg-[#1DD10026]">
                                     <img src="images/seat-green.png" alt="">
-                                    40 Seats left
+                                    <span id="totalSeat">40</span>  Seats left
                                 </button>
                             </div>
                         </div>
@@ -213,8 +213,9 @@
                             <!-- <div class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border" style="left: 50%">
                     </div> -->
                             <!-- first part -->
-                            <div class="ml-6 mt-6">
+                            <div class="ml-6 mt-6 flex gap-14">
                                 <h2>Select Your Seat</h2>
+                                <p class=" font-bold text-purple-800">per person seat Buy : <span id="cart">4</span></p>
                             </div>
                             <div class="mt-5 ml-6">
                                 <div
@@ -226,7 +227,10 @@
                                     <div class="order-1 bg-red-400 rounded-lg shadow-xl w-[600px] px-6 py-4">
                                         <!-- Date Div -->
                                         <div class="flex flex-col">
+                                             <!-- <div class="flex flex-row justify-center "> -->
+                                                
 
+                                             <!-- </div> -->
 
                                             <hr class="mt-10">
                                             <div class="flex flex-row justify-between mt-3 mb-3">
@@ -395,19 +399,21 @@
                             </div>
                             <div class=" flex justify-between mx-3 mt-1">
                                 <p>Total Price</p>
-                                <p>BDT <span class="total-cost">0</span></p>
+                                <p>BDT <span class="total-cost" id="total-cost">0</span></p>
                             </div>
-                            <!-- <div class="join justify-between items-center w-[450px]">
-                                <input class="input input-bordered join-item" placeholder="Have any copupon?"/>
-                                <button class="btn join-item rounded-r-full bg-green-600">Apply</button>
-                              </div> -->
-                            <label class="input input-bordered flex items-center gap-2 mx-2">
+                           
+                            <!-- <label class="input input-bordered flex items-center gap-2 mx-2">
                                 <input type="text" class="grow" placeholder="Have any coupon?" />
-                                <span class="badge badge-info">Apply</span>
-                            </label>
+            
+                                <button class="btn bg-purple-300 w-20 h-4">Apply</button>
+                            </label> -->
+                            <div class="input coupon-code flex items-center gap-2 mx-2">
+                                <input id="coupon-code" class="grow border-spacing-8 mx-2" type="text" placeholder="Have any coupon?">
+                                <button onclick="updateGrandTotal('apply-btn')" id="apply-btn" class="apply-btn bg-sky-500 w-20 h-8 rounded-lg">Apply</button>
+                            </div>
                             <div class=" flex justify-between mx-3 mt-1">
                                 <p>Grand Total</p>
-                                <p>BDT <span>0</span></p>
+                                <p>BDT <span id="grand-total">0</span></p>
                             </div>
 
                         </div>
@@ -437,7 +443,7 @@
                                         
                                     </div>
                                     <div class="form-control mt-6">
-                                        <button class="btn  bg-green-600">Next</button>
+                                        <button onclick="toPlay()" class="btn  bg-green-600">Next</button>
                                     </div>
                                 </form>
                                 <div class=" flex justify-between mx-3 mt-1 mb-2">
@@ -487,7 +493,7 @@
     </main>
 
     <!-- confirm Ticket sell part  that's are hidden-->
-    <section class="w-[718px] h-[480px] border-2xl border-green-700 mx-64 my-72 hidden">
+    <section id="final-score" class="w-[718px] h-[480px] border-2xl border-green-700 mx-64 my-72 hidden">
         <div class="flex flex-col justify-center items-center ">
             <div><img src="images/success.png" alt=""></div>
             <div class="text-green-600 mt-4 mb-4">SUCCESS</div>

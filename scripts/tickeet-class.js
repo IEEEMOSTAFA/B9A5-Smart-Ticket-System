@@ -9,6 +9,26 @@ btn.addEventListener('click', function(event){
     console.log(name,class_state,price);
     // testing part up::
     const selectedContainer = document.getElementById("selected-players-container");
+    event.target.setAttribute("disabled",false);
+    
+    event.target.style.backgroundColor = "green";
+    const firstLeftCount = getConvertedValue("cart");
+        if(firstLeftCount - 1 < 0){
+            alert("You Can NOt Buy More Than 4 Ticket");
+            return;
+        }
+
+    const leftCount = getConvertedValue("cart");
+        document.getElementById("cart").innerText = leftCount - 1;
+        // const firstCartCount = getConvertedValue("cart");
+        // console.log(firstCartCount);
+        // Total Bus Seat Count
+        const totalSeat = getConvertedValue("totalSeat");
+        document.getElementById("totalSeat").innerText = totalSeat - 1;
+        
+    const count = event.target.innerText;
+
+    console.log(count);
     const div = document.createElement("div");
         div.classList.add("flex", "gap-5","justify-evenly");
         // div.classList.add("px-2");
@@ -27,7 +47,14 @@ btn.addEventListener('click', function(event){
 
         selectedContainer.appendChild(div);
         updateTotalCost(price);
+        updateGrandTotal()
     
 });
 
+}
+
+function toPlay(){
+    hideElementById('home-screen');
+    
+    showElementById('final-score');
 }

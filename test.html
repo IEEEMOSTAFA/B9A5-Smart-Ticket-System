@@ -1,69 +1,29 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Move Section</title>
-</head>
-<body>
-
-<section id="section1">
-    <h2>Section 1</h2>
-    <p>This is section 1</p>
-</section>
-
-<section id="section2">
-    <h2>Section 2</h2>
-    <p>This is section 2</p>
-</section>
-
-<button onclick="moveSection()">Move Section</button>
-
-<script>
-function moveSection() {
-    // Get the section element to move
-    var sectionToMove = document.getElementById('section1');
-    
-    // Get the destination section where you want to move the section
-    var destinationSection = document.getElementById('section2');
-    
-    // Append the section to the destination section
-    destinationSection.appendChild(sectionToMove);
-    // Or you can use insertBefore() to place it before another element:
-    // destinationSection.insertBefore(sectionToMove, destinationSection.firstChild);
-}
-</script>
-
-</body>
-</html> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Scroll to Section</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
+    <section id="final-score" class="w-[718px] h-[480px] border-2xl border-green-700 mx-64 my-72 hidden">
+        <div class="flex flex-col justify-center items-center ">
+            <div><img src="images/success.png" alt=""></div>
+            <div class="text-green-600 mt-4 mb-4">SUCCESS</div>
+            <div class="justify-center items-center text-center">
+                <p><span class="font-bold text-gray-600">Thank you for Booking Our Bus Seats. <br>
+                        We are working hard to find the best service and deals for you. <br></span>
+                    <span class="text-gray-400">Shortly you will find a confirmation in your email.</span>
+                </p>
+            </div>
+            <div>
+                <div class="form-control mt-6 w-72 rounded-xl">
+                    <button onclick="again()" class="btn bg-green-500 text-white font-bold">Continue</button>
+                </div>
+            </div>
+            <div></div>
+        </div>
 
-<section id="section1">
-    <h2>Section 1</h2>
-    <button onclick="scrollToNextSection()">Scroll to Next Section</button>
-</section>
-
-<section id="section2">
-    <h2>Section 2</h2>
-    <p>This is the new section</p>
-</section>
-
-<script>
-function scrollToNextSection() {
-    // Get the next section element
-    var nextSection = document.getElementById('section2');
-    
-    // Scroll to the next section
-    nextSection.scrollIntoView({ behavior: 'smooth' });
-}
-</script>
-
+    </section>
 </body>
 </html>

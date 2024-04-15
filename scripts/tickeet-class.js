@@ -1,4 +1,5 @@
 
+
 const allBtn = document.getElementsByClassName("add-btn");
 for (const btn of allBtn) {
 btn.addEventListener('click', function(event){
@@ -52,9 +53,30 @@ btn.addEventListener('click', function(event){
 });
 
 }
+const nameInput = document.getElementById('nameInput');
+const phoneInput = document.getElementById('phoneInput');
+const emailInput = document.getElementById('emailInput');
+const nextButton = document.getElementById('nextButton');
+
+function toggleButton() {
+    if (nameInput.validity.valid && phoneInput.validity.valid) {
+        nextButton.removeAttribute('disabled');
+    } else {
+        nextButton.setAttribute('disabled', 'true');
+    }
+}
+
+nameInput.addEventListener('input', toggleButton);
+phoneInput.addEventListener('input', toggleButton);
 
 function toPlay(){
     hideElementById('home-screen');
     
     showElementById('final-score');
+}
+
+function playAgain(){
+    hideElementById('final-score');
+    
+    showElementById('home-screen');
 }

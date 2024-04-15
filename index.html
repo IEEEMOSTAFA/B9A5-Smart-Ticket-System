@@ -236,7 +236,7 @@
                                             <div class="flex flex-row justify-between mt-3 mb-3">
                                                 <div class="flex flex-row">
                                                     <div><img src="images/seat-green.png" alt=""></div>
-                                                    <div class="text-gray-600">Available</div>
+                                                    <div class="text-gray-600">Available </div>
                                                 </div>
                                                 <div class="flex flex-row">
                                                     <div><img src="images/seat-green-filled.png" alt=""></div>
@@ -419,31 +419,27 @@
                         </div>
                         <div class="h-[350px] w-[550px]  relative mt-2">
                             <div class="card shrink-0  w-[450px] shadow-2xl  ">
-                                <form class="card-body w-[450px]">
-                                    <div class="form-control ">
+                                <form id="myForm" class="card-body w-[450px]">
+                                    <div class="form-control">
                                         <label class="label">
-                                            <span class="label-text" >Passenger Name*</span>
+                                            <span class="label-text">Passenger Name*</span>
                                         </label>
-                                        <input type="text" placeholder="Enter your name" class="input input-bordered"
-                                            required />
+                                        <input id="nameInput" type="text" placeholder="Enter your name" class="input input-bordered" required />
                                     </div>
                                     <div class="form-control">
                                         <label class="label">
                                             <span class="label-text">Phone Number*</span>
                                         </label>
-                                        <input type="number" placeholder="Enter your phone number"
-                                            class="input input-bordered" required />
+                                        <input id="phoneInput" type="tel" placeholder="Enter your phone number" class="input input-bordered" required />
                                     </div>
                                     <div class="form-control">
                                         <label class="label">
                                             <span class="label-text">Email ID</span>
                                         </label>
-                                        <input type="email" placeholder="Enter your email id"
-                                            class="input input-bordered" required />
-                                        
+                                        <input id="emailInput" type="email" placeholder="Enter your email id" class="input input-bordered" />
                                     </div>
                                     <div class="form-control mt-6">
-                                        <button onclick="toPlay()" class="btn  bg-green-600">Next</button>
+                                        <button onclick="toPlay()" id="nextButton" class="btn bg-green-600" disabled>Next</button>
                                     </div>
                                 </form>
                                 <div class=" flex justify-between mx-3 mt-1 mb-2">
@@ -505,7 +501,7 @@
             </div>
             <div>
                 <div class="form-control mt-6 w-72 rounded-xl">
-                    <button class="btn bg-green-500 text-white font-bold">Continue</button>
+                    <button onclick="playAgain()" class="btn bg-green-500 text-white font-bold">Continue</button>
                 </div>
             </div>
             <div></div>
